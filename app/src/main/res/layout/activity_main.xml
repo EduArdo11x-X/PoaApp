@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Fondo de pantalla -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagen1" />
+
+    <!-- Título llamativo -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido!"
+        android:textSize="36sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <!-- Primer botón -->
+    <Button
+        android:id="@+id/btnUsuarios"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Usuarios"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <!-- Segundo botón -->
+    <Button
+        android:id="@+id/btnCarrera"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Carreras"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/btnUsuarios"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Tercer botón -->
+    <Button
+        android:id="@+id/btnUnidad"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Unidades"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/btnCarrera"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
+
+
+
+
+
