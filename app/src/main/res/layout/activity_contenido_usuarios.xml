@@ -1,73 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:layout_height="500dp"
+    android:padding="16dp"
+    android:background="@drawable/fondo_inicio">
 
+    <!-- Título de la Página -->
     <TextView
-        android:id="@+id/ID"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID"
-        android:textSize="18sp" />
+        android:text="Detalles del Usuario"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
 
-    <TextView
-        android:id="@+id/fechaNacimiento"
-        android:layout_width="wrap_content"
+    <!-- Contenedor para los Detalles del Usuario -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fecha de Nacimiento"
-        android:layout_below="@id/ID"
-        android:textSize="18sp" />
+        android:orientation="vertical"
+        android:layout_below="@id/title"
+        android:layout_marginTop="16dp">
 
-    <TextView
-        android:id="@+id/Nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nombre"
-        android:layout_below="@id/fechaNacimiento"
-        android:textSize="18sp" />
+        <!-- ID del Usuario -->
+        <TextView
+            android:id="@+id/Id_Usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
 
+        <!-- Fecha de Nacimiento -->
+        <TextView
+            android:id="@+id/fechaNacimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de Nacimiento: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
 
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/Nombre_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
 
-    <TextView
-        android:id="@+id/Apellido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apellido"
-        android:layout_below="@id/Nombre"
-        android:textSize="18sp" />
+        <!-- Apellido -->
+        <TextView
+            android:id="@+id/Apellido_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
 
-    <TextView
-        android:id="@+id/Correo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Correo"
-        android:layout_below="@id/Apellido"
-        android:textSize="18sp" />
+        <!-- Correo -->
+        <TextView
+            android:id="@+id/Correo_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
 
-    <TextView
-        android:id="@+id/IdRolText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rol"
-        android:layout_below="@id/Correo"
-        android:textSize="18sp" />
+        <!-- Rol -->
+        <TextView
+            android:id="@+id/IdRolText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rol: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
 
-    <TextView
-        android:id="@+id/usuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Usuario"
-        android:layout_below="@id/IdRolText"
-        android:textSize="18sp" />
+        <!-- Usuario -->
+        <TextView
+            android:id="@+id/usuario_U"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuario: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
 
-    <TextView
-        android:id="@+id/contraseña"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contraseña"
-        android:layout_below="@id/usuario"
-        android:textSize="18sp" />
+        <!-- Contraseña -->
+        <TextView
+            android:id="@+id/contraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña: "
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
 
+    </LinearLayout>
 
 </RelativeLayout>

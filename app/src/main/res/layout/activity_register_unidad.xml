@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/fondo_inicio"
+    tools:context=".RegisterUnidadActivity">
+
+    <!-- Título de la pantalla -->
+    <TextView
+        android:id="@+id/register_title_Unidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar Unidad"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Campo de entrada para nombre -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nombre_unidad_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_title_Unidad"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nombre_unidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:textColor="@android:color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de entrada para coordinación -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/coordinacion_unidad_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombre_unidad_input_layout"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/coordinacion_unidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Coordinación"
+            android:textColor="@android:color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de entrada para director -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/director_unidad_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coordinacion_unidad_input_layout"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/director_unidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Director"
+            android:textColor="@android:color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón de registrarse -->
+    <Button
+        android:id="@+id/register_button_unidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/director_unidad_input_layout"
+        android:text="Registrar"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorAccent"/>
+</RelativeLayout>

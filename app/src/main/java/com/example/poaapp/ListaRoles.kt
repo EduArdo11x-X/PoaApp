@@ -35,9 +35,9 @@ class ListaRoles : ComponentActivity() {
 
     private fun cargarRoles() {
         // Datos quemados de roles
-        val rol1 = Roles(1, "Admin", "Administrador del sistema")
-        val rol2 = Roles(2, "User", "Usuario del sistema")
-        val rol3 = Roles(3, "Guest", "Invitado del sistema")
+        val rol1 = Roles(1, "DOCENTE", "Docente del sistema")
+        val rol2 = Roles(2, "EVALUADOR", "Evaluador del sistema")
+        val rol3 = Roles(3, "ADMINISTRADOR", "Administrador del sistema")
 
         listaRoles.addAll(listOf(rol1, rol2, rol3))
 

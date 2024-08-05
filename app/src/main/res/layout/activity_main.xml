@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".MainActivity">
 
     <!-- Fondo de pantalla -->
@@ -12,63 +11,119 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/imagen1" />
+        android:src="@drawable/fondo_inicio" />
 
     <!-- Título llamativo -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido!"
+        android:text="Sistema Poa"
         android:textSize="36sp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto_bold" />  <!-- Usa una fuente moderna -->
 
     <!-- Primer botón -->
     <Button
         android:id="@+id/btnUsuarios"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Usuarios"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:background="@drawable/button_background"
         android:layout_below="@id/title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp" />
 
     <!-- Segundo botón -->
     <Button
         android:id="@+id/btnCarrera"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Carreras"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:background="@drawable/button_background"
         android:layout_below="@id/btnUsuarios"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp" />
 
     <!-- Tercer botón -->
     <Button
         android:id="@+id/btnUnidad"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Unidades"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:background="@drawable/button_background"
         android:layout_below="@id/btnCarrera"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnAgregarUnidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Unidades"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/btnUnidad"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnAgregarUsuarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Usuarios"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/btnAgregarUnidad"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnAgregarCarreras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Carreras"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/btnAgregarUsuarios"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
 
 </RelativeLayout>
-
-
-
-
-

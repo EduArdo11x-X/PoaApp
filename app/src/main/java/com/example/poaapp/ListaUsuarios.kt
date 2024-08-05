@@ -1,6 +1,6 @@
 package com.example.poaapp
 
-import android.content.Intent
+import Usuarios
 import android.os.Bundle
 import android.util.Log
 import android.widget.ListView
@@ -8,9 +8,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.poaaplication.utils.Apis
 import com.example.poaapp.model.Roles
-import com.example.poaapp.model.Usuarios
-import java.text.SimpleDateFormat
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ListaUsuarios : ComponentActivity() {
 
@@ -29,8 +31,8 @@ class ListaUsuarios : ComponentActivity() {
         // Simular carga de roles
         cargarRolesSimulados()
 
-        // Cargar usuarios
-        cargarUsuarios()
+        // Cargar usuarios desde la API
+        cargarUsuariosDesdeApi()
 
         // Configuración de padding para las ventanas
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { view, insets ->
@@ -49,17 +51,25 @@ class ListaUsuarios : ComponentActivity() {
         listaRoles.addAll(listOf(rol1, rol2, rol3))
     }
 
-    private fun cargarUsuarios() {
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd")
+    private fun cargarUsuariosDesdeApi() {
+        val api = Apis()
+        val usuarioService = api.getUsuarioService()
+        usuarioService.getUsuarios().enqueue(object : Callback<List<Usuarios>> {
+            override fun onResponse(call: Call<List<Usuarios>>, response: Response<List<Usuarios>>) {
+                if (response.isSuccessful) {
+                    response.body()?.let { usuarios ->
+                        listaUsuarios.addAll(usuarios)
+                        // Configurar el adaptador con los datos de la API
+                        listView.adapter = UsuarioAdapter(this@ListaUsuarios, R.layout.activity_contenido_usuarios, listaUsuarios)
+                    }
+                } else {
+                    Log.e("ListaUsuarios", "Error en la respuesta: ${response.errorBody()}")
+                }
+            }
 
-        // Datos quemados de usuarios con fechas y roles
-        val usuario1 = Usuarios(1, dateFormat.parse("2002-07-20")!!, "Kevin", "Cajeca", "kevin.cajeca@example.com", listaRoles[0], "Nano")
-        val usuario2 = Usuarios(2, dateFormat.parse("2003-05-15")!!, "Erick", "Guarango", "erick.guarango@example.com", listaRoles[1], "Candelario")
-        val usuario3 = Usuarios(3, dateFormat.parse("2004-11-10")!!, "David", "Mayancela", "david.mayancela@example.com", listaRoles[2], "Anfibio")
-
-        listaUsuarios.addAll(listOf(usuario1, usuario2, usuario3))
-
-        // Configurar el adaptador con los datos quemados
-        listView.adapter = UsuarioAdapter(this, R.layout.activity_contenido_usuarios, listaUsuarios)
+            override fun onFailure(call: Call<List<Usuarios>>, t: Throwable) {
+                Log.e("ListaUsuarios", "Error en la llamada a la API", t)
+            }
+        })
     }
 }
